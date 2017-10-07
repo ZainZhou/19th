@@ -6,84 +6,93 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <link rel="stylesheet" href="/praise_xi_shanbei/Public/js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
-        <script src = '/praise_xi_shanbei/Public/js/jquery-2.1.4.min.js'></script>
-        <script src = '/praise_xi_shanbei/Public/js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js'></script>
-        <script src = '/praise_xi_shanbei/Public/js/pageChange.js?v=<?php echo time();?>'></script>
-        <script src = '/praise_xi_shanbei/Public/js/main.js?v=<?php echo time();?>'></script>
-        <script src = "/praise_xi_shanbei/Public/js/styleSet.js?v=<?php echo time();?>"></script>
-        <link rel="stylesheet" href="/praise_xi_shanbei/Public/css/stlye.css?v=<?php echo time();?>">
-        <link rel="stylesheet" href="/praise_xi_shanbei/Public/css/animate.min.css?v=<?php echo time();?>">
+        <link rel="stylesheet" href="/19th/Public/js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.css">
+        <script src = '/19th/Public/js/jquery-2.1.4.min.js'></script>
+        <script src = '/19th/Public/js/jquery.mobile-1.4.5/jquery.mobile-1.4.5.min.js'></script>
+        <script src = '/19th/Public/js/pageChange.js?v=<?php echo time();?>'></script>
+        <script src = '/19th/Public/js/main.js?v=<?php echo time();?>'></script>
+        <script src = "/19th/Public/js/styleSet.js?v=<?php echo time();?>"></script>
+        <link rel="stylesheet" href="/19th/Public/css/stlye.css?v=<?php echo time();?>">
+        <link rel="stylesheet" href="/19th/Public/css/animate.min.css?v=<?php echo time();?>">
     </head>
     <body>
         <div data-role="page" id="mask">
 
         </div>
+        <div class="mask">
+
+        </div>
         <div data-role="page" id="beginPage">
-            <img src="/praise_xi_shanbei/Public/images/tuanLogo.png?v=1" alt="" class="logo">
-            <img src="/praise_xi_shanbei/Public/images/beginXi.png?v=1" alt="" class="animated pulse beginImg">
+            <img src="/19th/Public/images/VoiceofYoung.png?v=1" alt="" class="logo">
+            <img src="/19th/Public/images/beginXi.png?v=1" alt="" class="animated pulse beginImg">
             <div id="btnContainer">
-                <div class="startBtn btn"></div>
-                <div class="listBtn btn"></div>
+                <div class="o_btn startBtn btn">
+                    开始游戏
+                </div>
+                <div class="y_btn listBtn btn">
+                    查看榜单
+                </div>
             </div>
             <span class="copyContainer">
-                <span class="copyright">©️Redrock</span>
+                <span class="copyright">©️红岩网校工作站</span>
             </span>
         </div>
         <div data-role="page" id="backPage">
-            <div class="mask">
-
-            </div>
+            <img src="/19th/Public/images/VoiceofYoung.png?v=1" alt="" class="logo">
             <div class="programerHolder">
-                <div class="pBox">
-                    <span class="closeP">&nbsp;X&nbsp;</span>
-                    <ul class="programer">
-                        <li>产品策划：杨奇凡</li>
-                        <li>
-                            视觉设计：唐荟云
-                        </li>
-                        <li>
-                            前端开发：周政
-                        </li>
-                        <li>
-                            后端开发：隆宗益
-                        </li>
-                        <li>
-                            指导教师：杨奇凡
-                        </li>
-                        <li>
-                            出品：红岩网校工作站
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="warning">
-                <div class="position">
-                    <div class="close">&nbsp;X&nbsp;</div>
-                </div>
+                    <div class="position_box">
+                        <img src="/19th/Public/images/developer_title.png?v=1" alt="" class="developer_title">
+                        <span class="closeP">&nbsp;X&nbsp;</span>
+                        <ul class="programer">
+                            <li>产品设计：杨奇凡</li>
+                            <li>
+                                视觉设计：田梅琳
+                            </li>
+                            <li>
+                                程序开发：周政
+                            </li>
+                            <li>
+                                指导教师：杨奇凡
+                            </li>
+                            <li>
+                                出品：红岩网校工作站
+                            </li>
+                        </ul>
+                    </div>
             </div>
             <span class="Qc">
-                <span class="programerList">
-                    ?
-                </span>
+
             </span>
-            <img src="/praise_xi_shanbei/Public/images/backintro.png" alt="" class="backImage">
-            <img src="/praise_xi_shanbei/Public/images/back.png?v=1" alt="" class="introduction">
-            <div class="btnC">
-                <div class="playBtn btn"></div>
-                <div class="returnBtn btn"></div>
+            <div class="title_container">
+                    <img src="/19th/Public/images/background_title.png" alt="" class="background_title">
+            </div>
+            <div class="background_content">
+                党的十八大以来，以习近平同志为核心的
+                党中央围绕改革发展稳定、内政外交国防、
+                治党治国治军等领域形成了一系列内涵丰
+                富、思想深刻、特色鲜明的治国理政新理
+                念新思想新战略。2017年10月18日，党
+                的第十九大将胜利召开，为深化党的最新
+                理论成果的学习宣传，更好地帮助团员青
+                年。特别是青年大学生深刻领会党的创新
+                理论的丰富内涵、精神实质和实践要求，
+                我们特开发“学习新名词 喜迎十九大”新媒
+                体产品，供大家学习参考。
+            </div>
+            <div class="btnContainer">
+                <div class="o_btn playBtn btn">我要学习</div>
+                <div class="y_btn return btn">返回</div>
             </div>
             <span class="copyContainer">
-                <span class="copyright">©️Redrock</span>
+                <span class="copyright">©️红岩网校工作站</span>
             </span>
-
         </div>
         <div data-role="page" id="gamePage">
             <span class="Qtitle">
 
             </span>
             <div class="questionContainer">
-                <img src="/praise_xi_shanbei/Public/images/flag.png?v=1" alt="" class="flag">
+                <img src="/19th/Public/images/flag.png?v=1" alt="" class="flag">
                 <div class="conversation">
                     <p class="littleTitle">
 
@@ -116,8 +125,8 @@
                     </div><br><br>
                 </div>
             </div>
-            <div class="nextBtn btn">
-                <span class="time">15</span>s
+            <div class="nextBtn y_btn btn">
+                <span class="time">15s</span>
             </div>
             <span class="copyContainer">
                 <span class="copyright">©️Redrock</span>
@@ -125,14 +134,14 @@
         </div>
         <div data-role="page" id="overPage">
             <div class="firstState">
-                <img src="/praise_xi_shanbei/Public/images/good.png" alt="" class="goodBack">
+                <img src="/19th/Public/images/good.png" alt="" class="goodBack">
                 <div class="goOver btn">
 
                 </div>
             </div>
             <div class="secondState">
-                <img src="/praise_xi_shanbei/Public/images/tuanLogo.png" alt="" class="logo">
-                <img src="/praise_xi_shanbei/Public/images/myCardtitle.png" alt="" class="cardTitle">
+                <img src="/19th/Public/images/tuanLogo.png" alt="" class="logo">
+                <img src="/19th/Public/images/myCardtitle.png" alt="" class="cardTitle">
                 <div class="cardBack">
                     <p class="num">1</p>
                     <p class="sentence">
@@ -151,12 +160,12 @@
             </span>
         </div>
         <div data-role="page" id="listPage">
-            <img src="/praise_xi_shanbei/Public/images/tuanLogo.png" alt="" class="logo">
+            <img src="/19th/Public/images/tuanLogo.png" alt="" class="logo">
             <div class="test">
 
             </div>
                 <div class="listHolder">
-                    <img src="/praise_xi_shanbei/Public/images/listTop.png" alt="" class="listTop">
+                    <img src="/19th/Public/images/listTop.png" alt="" class="listTop">
                     <img src="" alt="" class="avatar">
                     <p class="showP">
                         <span class="usrName">咕咚咕咚好</span> 排名:第 <span class="rankNum">89</span> 名
@@ -173,17 +182,17 @@
                         </li>
                         <li>
                             <img src="" alt="" class="avatarBox">
-                            <img src="/praise_xi_shanbei/Public/images/au.png" alt="" class="medal">
+                            <img src="/19th/Public/images/au.png" alt="" class="medal">
                             <span class="aName" style="padding-top: 3px;"></span>
                         </li>
                         <li>
                             <img src="" alt="" class="avatarBox">
-                            <img src="/praise_xi_shanbei/Public/images/si.png" alt="" class="medal">
+                            <img src="/19th/Public/images/si.png" alt="" class="medal">
                             <span class="aName" style="padding-top: 3px;"> </span>
                         </li>
                         <li>
                             <img src="" alt="" class="avatarBox">
-                            <img src="/praise_xi_shanbei/Public/images/Cu.png" alt="" class="medal">
+                            <img src="/19th/Public/images/Cu.png" alt="" class="medal">
                             <span class="aName" style="padding-top: 3px;"> </span>
                         </li>
                         <li>

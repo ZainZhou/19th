@@ -6,18 +6,21 @@ timeNum = 15;
 nextFlag = 0;
 current = 1;
 $(function () {
-    $('.programerList').on('click',function(){
-        $('.mask').css('display','block');
-        $('.programerHolder').css('display','block');
-    });
-    $('.closeP').on('click',function(){
-        $('.mask').css('display','none');
-        $('.programerHolder').css('display','none');
-    });
+    var mask = $('.mask');
+    var developer_list = $('.programerHolder');
+    var close_developer = $('.closeP');
    $('.startBtn').on('click',function(){
         $.mobile.changePage('#backPage',{
             transition:'flow'
         });
+    });
+    $('.Qc').on('click',function(){
+        mask.css('display','block');
+        developer_list.css('display','block');
+    });
+    close_developer.on('click',function(){
+        mask.css('display','none');
+        developer_list.css('display','none');
     });
     $('.listBtn').on('click',function(){
         $.mobile.loading('show');
@@ -52,11 +55,6 @@ $(function () {
             }
         });
     });
-    $('.returnBtn').on('click',function(){
-        $.mobile.changePage('#beginPage',{
-            transition:'flow'
-        });
-    });
     $('.return').on('click',function(){
         $.mobile.changePage('#beginPage',{
             transition:'flow'
@@ -70,7 +68,7 @@ $(function () {
         clearInterval(timer);
         timer = setInterval(function(){
             timeNum--;
-            $('.time').html(timeNum);
+            $('.time').html(timeNum+'s');
             if (timeNum == 0){
                 nextFlag = 1;
                 clearInterval(timer);
@@ -162,7 +160,7 @@ $(function () {
         timeNum = 15;
         timer = setInterval(function(){
             timeNum--;
-            $('.time').html(timeNum);
+            $('.time').html(timeNum+'s');
             if (timeNum == 0){
                 nextFlag = 1;
                 clearInterval(timer);

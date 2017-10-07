@@ -5,104 +5,180 @@
   font-family: "Microsoft YaHei";
   text-shadow: none !important;
 }
+@font-face {
+  font-family: 'tx';
+  src: url('../font/tx.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+body{
+  width: 100%;
+  height: 100%;
+}
 #beginPage,#backPage,#gamePage,#overPage,#listPage{
   position: relative;
-  background:url("../images/shadow.png")fixed bottom no-repeat  #ffe28c;
-  background-size: 100%;
+  background:url("../images/startPage_back.jpg")center no-repeat;
+  background-size: 100% 100%;
   .copyContainer{
     text-align: center;
     display: inline-block;
     width: 100%;
     position: absolute;
-    top: 97%;
+    top: 96%;
     .copyright{
-      border-radius: 5px;
-      background: #ffe28c;
-      box-shadow:0 0 4px 4px #ffe28c;
-      color: #e86209;
+      color: #ffb31a;
+      font-size: 10px;
     }
   }
 }
+.mask{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #000000;
+  opacity: 0.6;
+  z-index: 10000;
+  display: none;
+}
 .btn{
-  width: 45%;
-  margin: 0 auto;
+  width: 40.5%;
+  padding: 3.2% 0;
+  text-align: center;
+  font-family: tx;
+  color: #ffffff;
+  font-size: 19px;
+  box-shadow: 3px 6px #faca81;
+  border-radius: 10px;
+}
+.o_btn{
+  background: url("../images/orange_btn.png")center center no-repeat;
+  background-size: 100% 100%;
+  text-shadow:0 3px #ff6114 !important;
+}
+.y_btn{
+  background: url("../images/yellow_btn.png")center center no-repeat;
+  background-size: 100% 100%;
+  text-shadow:0 3px #f7a81c !important;
+}
+.logo{
+  float: left;
+  width: 25.33%;
+  margin: 2.4%;
 }
 #beginPage{
   .beginImg{
-    width: 90%;
+    width: 86%;
     display: block;
-    margin: 3% auto;
+    margin: 0 auto;
   }
   #btnContainer{
     width: 100%;
-    height: 20%;
-    position: absolute;
-    top: 65%;
-    z-index: 100;
+    overflow: hidden;
+    margin-top: 11%;
+    padding-bottom: 10px;
     div{
-      width: 45%;
-      height: 39%;
       margin: 0 auto;
     }
     .startBtn{
-      background: url("../images/startBtn.png")center center no-repeat;
-      background-size: 100% 100%;
-      margin-bottom: 6%;
-    }
-    .listBtn{
-      background: url("../images/listBtn.png")center center no-repeat;
-      background-size: 100% 100%;
+      margin-bottom: 7%;
     }
   }
 }
 #backPage{
-  position: relative;
-  .backImage{
-    width: 68%;
-    display: block;
-    margin: 4% auto;
-    margin-top: 0;
-  }
-  .Qc{
-    display: inline-block;
+  .btnContainer{
     width: 100%;
-    .programerList{
-      background: linear-gradient(#ffd33b,#fc9a12);
-      height: 20px;
-      width: 20px;
-      line-height: 18px;
-      text-shadow: none;
-      border-radius: 50%;
-      text-align: center;
-      float: right;
-      margin: 10px;
-      color: #ffffff;
+    overflow: hidden;
+    margin-top: 9%;
+    padding-bottom: 10px;
+    float: left;
+    div{
+      margin: 0 auto;
+    }
+
+    .playBtn{
+      margin-bottom: 7%;
     }
   }
-  .introduction{
-    width: 70%;
+  .Qc{
     display: block;
-    margin: 2% auto;
-  }
-  .playBtn{
-    background: url("../images/startGame.png")center center no-repeat;
+    float: right;
+    width: 6.67%;
+    padding: 3.33% 0;
+    background: url("../images/developer_btn.png")center no-repeat;
     background-size: 100% 100%;
-    height: 50%;
-    margin-bottom: 2%;
-    z-index: 100;
+    margin: 2.4%;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px #9ad7d4;
   }
-  .btnC{
+  .programerHolder{
+    display: none;
+    z-index: 100000;
     position: absolute;
-    z-index: 100;
-    width: 100%;
-    height: 15%;
-    top: 73%;
-  }
-  .returnBtn{
-    background: url("../images/return.png")center center no-repeat;
+    width: 76%;
+    height: 41.87%;
+    left: 12%;
+    top:25%;
+    background: url("../images/developer_back.png")center no-repeat;
     background-size: 100% 100%;
-    height: 50%;
-    z-index: 100;
+    border-radius: 26px;
+    box-shadow: 0 8px 8px #333;
+    .position_box{
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .developer_title{
+      width: 78.94%;
+      float: left;
+      margin-left: 10.53%;
+      margin-top: -7.9%;
+    }
+    .closeP{
+      position: absolute;
+      top: 5%;
+      left: 86%;
+      background: #fa8b64;
+      color: #fefff0;
+      font-size: 17px;
+      padding: 0.5%;
+      border:1px solid #fefff0;
+      border-radius: 50%;
+    }
+    .programer{
+      list-style: none;
+      display: block;
+      margin: 0 auto;
+      padding-top: 18%;
+      width: 80%;
+      li{
+        text-align: center;
+        width: 100%;
+        color: #f69c4a;
+        margin-bottom: 8%;
+      }
+    }
+  }
+  .title_container{
+    width: 100%;
+    float: left;
+    .background_title{
+      display: block;
+      margin: 0 auto;
+      width: 51.46%;
+    }
+  }
+  .background_content{
+    background: url("../images/background_back.png")center no-repeat;
+    background-size: 100% 100%;
+    width: 60%;
+    float: left;
+    margin-left: 14%;
+    line-height: 20px;
+    color: #f69c4a;
+    font-size: 12px;
+    padding: 6%;
+    border-radius: 20px;
+    box-shadow: 0 5px 5px #f9efc3;
   }
 }
 #gamePage{
@@ -163,18 +239,10 @@
     }
   }
   .nextBtn{
-    padding: 3% 0;
-    margin: 13px auto;
-    background: url("../images/blankBtn.png")center center no-repeat;
-    text-align: center;
-    color: #ffffff;
-    font-size: 20px;
-    span{
-      margin-right: 2px;
-      font-size: 20px;
+    .time{
+      font-family: tx;
+      font-size: 18px;
     }
-    background-size: 100% 100%;
-    margin-bottom: 10%;
   }
 }
 #overPage{
@@ -317,9 +385,3 @@
     }
   }
 }
-
-//.box{
-//  width: 90%;
-//  margin: 0 auto;
-//  margin-bottom: 30%;
-//}
