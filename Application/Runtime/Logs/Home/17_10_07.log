@@ -1,0 +1,43 @@
+[ 2017-10-07T14:14:33+08:00 ] ::1 /praise_xi_shanbei/Home/Index/rank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000641s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0019s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` WHERE `openid` = 'ouRCyjhdsj8RQofIOPHc7nX9hA98' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `users` WHERE `openid` = 'ouRCyjhdsj8RQofIOPHc7nX9hA98' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` WHERE `score` > '770' LIMIT 1   [ RunTime:0.0014s ]
+SQL: SELECT `nickname`,`imgurl`,`score` FROM `users` ORDER BY score desc LIMIT 10   [ RunTime:0.0022s ]
+SQL: SELECT `nickname`,`imgurl`,`score` FROM `users` ORDER BY score desc LIMIT 50   [ RunTime:0.0004s ]
+
+[ 2017-10-07T14:14:34+08:00 ] ::1 /praise_xi_shanbei/Home/Index/moreRank
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000746s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` WHERE `openid` = 'ouRCyjhdsj8RQofIOPHc7nX9hA98' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `nickname`,`imgurl`,`score` FROM `users` ORDER BY score desc LIMIT 0,50   [ RunTime:0.0005s ]
+
+[ 2017-10-07T14:14:36+08:00 ] ::1 /praise_xi_shanbei/Home/Index/questions
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000269s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000455s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0099s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` WHERE `openid` = 'ouRCyjhdsj8RQofIOPHc7nX9hA98' LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `questions` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `user_current_question` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `user_current_question` WHERE `openid` = 'ouRCyjhdsj8RQofIOPHc7nX9hA98' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `questions` WHERE `special_type` = '2' ORDER BY rand() LIMIT 1   [ RunTime:0.0082s ]
+SQL: UPDATE `user_current_question` SET `id`='4',`openid`='ouRCyjhdsj8RQofIOPHc7nX9hA98',`question_id`='752',`current`='1',`today_group_count`='0',`today_learn_id`='[\"752\"]',`date`='2017-10-07',`time`='1507356876' WHERE `openid` = 'ouRCyjhdsj8RQofIOPHc7nX9hA98' [ RunTime:0.0131s ]
+
+[ 2017-10-07T14:14:52+08:00 ] ::1 /praise_xi_shanbei/Home/Index/questions
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000571s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000951s ]
+SQL: SHOW COLUMNS FROM `users` [ RunTime:0.0086s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `users` WHERE `openid` = 'ouRCyjhdsj8RQofIOPHc7nX9hA98' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `questions` [ RunTime:0.0016s ]
+SQL: SHOW COLUMNS FROM `user_current_question` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `user_current_question` WHERE `openid` = 'ouRCyjhdsj8RQofIOPHc7nX9hA98' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `questions` WHERE `id` NOT IN ('752') AND `special_type` = '1' ORDER BY rand() LIMIT 1   [ RunTime:0.0059s ]
+SQL: UPDATE `user_current_question` SET `id`='4',`openid`='ouRCyjhdsj8RQofIOPHc7nX9hA98',`question_id`='57',`current`='2',`today_group_count`='0',`today_learn_id`='[\"752\",\"57\"]',`date`='2017-10-07',`time`='1507356892' WHERE `openid` = 'ouRCyjhdsj8RQofIOPHc7nX9hA98' [ RunTime:0.0010s ]
+
