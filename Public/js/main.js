@@ -7,9 +7,9 @@ $(document).on("pageshow","#backPage",function(){
 $(document).on("pageshow","#listPage",function(){
     $('.beginImg').removeClass('pulse');
 });
-var question_link = "/19th/Home/Index/questions";
-var rank_link = "/19th/Home/Index/moreRank";
-var link_rank = "/19th/Home/Index/rank";
+var question_link = "/19th/index.php/Home/questions";
+var rank_link = "/19th/index.php/Home/moreRank";
+var link_rank = "/19th/index.php/Home/rank";
 function loadImgs(b, g) {
     var f = {};
     var d = 0;
