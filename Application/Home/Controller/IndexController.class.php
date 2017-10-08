@@ -27,7 +27,7 @@ class IndexController extends BaseController {
             $share = '我正在参加 “团团打卡 学讲话” 特训，打卡第'.$user['days'].'天，排第'.$rank.'名，明天继续！你也加入吧！';
         }
 //        $signature = $this->JSSDKSignature();
-        $this->assign('signature', $signature);
+//        $this->assign('signature', $signature);
         $this->assign('appid', $this->appid);
         $this->assign('share', $share);
         $this->display();
@@ -80,19 +80,14 @@ class IndexController extends BaseController {
         if ($currentData['today_learn_id']) {
             $map['id'] = array('NOT IN', $currentData['today_learn_id']);
         }
-        if ($currentData['current'] == 0) {
-            $map['special_type'] = '2';
-            $question = $questions->where($map)->order('rand()')->find();
-        } elseif ($currentData['current'] == 1) {
-            $map['special_type'] = '1';
+        if (count($map) > 0) {
             $question = $questions->where($map)->order('rand()')->find();
         } else {
-            $question = $questions->where($map)->order('rand()')->find();
+            $question = $questions->order('rand()')->find();
         }
         array_push($currentData['today_learn_id'], $question['id']);
         $currentData['today_learn_id'] = json_encode($currentData['today_learn_id']);
         $currentData['current'] += 1;
-        $current = $currentData['current'];
         if ($currentData['current'] == 5) {
             $currentData['current'] = 0;
             $currentData['today_group_count'] += 1;
@@ -112,7 +107,6 @@ class IndexController extends BaseController {
             'status' => 200,
             'data'   => array(
                 'question' => $question,
-                'current'  => $current
             )
         ));
     }
@@ -162,6 +156,12 @@ class IndexController extends BaseController {
         $limit = $to - $offset;
         $users = M('users');
         $list = $users->order('score desc')->field('nickname, imgurl, score')->limit($offset, $limit)->select();
+        $rank = $from;
+        foreach ($list as &$v) {
+            unset($v['score']);
+            $v['rank'] = $rank;
+            $rank++;
+        }
         $this->ajaxReturn(array(
             'status' => 200,
             'data'  => $list

@@ -7,15 +7,15 @@ $(document).on("pageshow","#backPage",function(){
 $(document).on("pageshow","#listPage",function(){
     $('.beginImg').removeClass('pulse');
 });
-var question_link = "/praise_xi_shanbei/Home/Index/questions";
-var rank_link = "/praise_xi_shanbei/Home/Index/moreRank";
-var link_rank = "/praise_xi_shanbei/Home/Index/rank";
+var question_link = "/19th/Home/Index/questions";
+var rank_link = "/19th/Home/Index/moreRank";
+var link_rank = "/19th/Home/Index/rank";
 function loadImgs(b, g) {
     var f = {};
     var d = 0;
     for (var e = 0; e < b.length; e++) {
         var h = new Image();
-        h.src = "/praise_xi_shanbei/Public/images/" + b[e] +".png";
+        h.src = "/19th/Public/images/" + b[e] +".png";
         var c = b[e].split(".")[0];
         h.onload = function () {
             d++;
