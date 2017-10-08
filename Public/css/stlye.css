@@ -24,24 +24,16 @@ body {
   background: url("../images/startPage_back.jpg") center no-repeat;
   background-size: 100% 100%;
 }
-#beginPage .copyContainer,
-#backPage .copyContainer,
-#gamePage .copyContainer,
-#overPage .copyContainer,
-#listPage .copyContainer {
-  text-align: center;
-  display: inline-block;
-  width: 100%;
-  position: absolute;
-  top: 96%;
-}
-#beginPage .copyContainer .copyright,
-#backPage .copyContainer .copyright,
-#gamePage .copyContainer .copyright,
-#overPage .copyContainer .copyright,
-#listPage .copyContainer .copyright {
+#beginPage .copyright,
+#backPage .copyright,
+#gamePage .copyright,
+#overPage .copyright,
+#listPage .copyright {
   color: #ffb31a;
   font-size: 10px;
+  text-align: center;
+  width: 100%;
+  padding-top: 5%;
 }
 .mask {
   width: 100%;
@@ -93,6 +85,9 @@ body {
 }
 #beginPage #btnContainer .startBtn {
   margin-bottom: 7%;
+}
+#backPage .copyright {
+  float: left;
 }
 #backPage .btnContainer {
   width: 100%;
@@ -188,60 +183,37 @@ body {
   border-radius: 20px;
   box-shadow: 0 5px 5px #f9efc3;
 }
-#gamePage .Qtitle {
-  text-align: center;
-  display: inline-block;
-  width: 100%;
-  text-shadow: none;
-  color: #ff960f;
-  font-size: 18px;
-  margin: 3% 0;
-}
 #gamePage .questionContainer {
   width: 80%;
-  min-height: 70%;
-  background: url("../images/questionBack.png") center no-repeat;
+  background: url("../images/content_back.png") center no-repeat;
   background-size: 100% 100%;
   margin: 0 auto;
+  margin-top: 12%;
   border-radius: 4px;
   border-bottom: 10px solid #fff1af;
   word-wrap: break-word;
   position: relative;
 }
-#gamePage .questionContainer .flag {
-  width: 22%;
-  position: absolute;
-  left: -10px;
-  top: -10px;
-}
-#gamePage .questionContainer .allusion {
-  padding-top: 10%;
-  overflow: hidden;
-  color: #fe9507;
-}
-#gamePage .questionContainer .allusion span {
-  float: left;
-  padding-left: 5px;
-}
-#gamePage .questionContainer .allusion .box {
-  width: 90%;
-  margin: 0 auto;
-  overflow: hidden;
-}
-#gamePage .questionContainer .allusion div > div {
-  width: 90%;
-  float: right;
-  font-size: 16px;
-  padding-right: 8px;
-}
 #gamePage .questionContainer .conversation {
+  padding: 5%;
   padding-top: 10%;
-  display: none;
-  color: #ff8f00;
 }
 #gamePage .questionContainer .conversation div {
-  font-size: 17px !important;
+  font-size: 13px !important;
   padding: 13px;
+  color: #f69c4a;
+}
+#gamePage .questionContainer .conversation .Qtitle {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  font-size: 18px;
+  font-family: tx;
+  color: #fa865e;
+  text-shadow: 1px 3px 0 #f8ddaf !important;
+}
+#gamePage .nextBtn {
+  margin: 3% auto;
 }
 #gamePage .nextBtn .time {
   font-family: tx;

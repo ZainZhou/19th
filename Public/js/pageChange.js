@@ -9,6 +9,7 @@ $(function () {
     var mask = $('.mask');
     var developer_list = $('.programerHolder');
     var close_developer = $('.closeP');
+    var time_content = $('.time');
    $('.startBtn').on('click',function(){
         $.mobile.changePage('#backPage',{
             transition:'flow'
@@ -68,13 +69,11 @@ $(function () {
         clearInterval(timer);
         timer = setInterval(function(){
             timeNum--;
-            $('.time').html(timeNum+'s');
+            time_content.html(timeNum+' s');
             if (timeNum == 0){
                 nextFlag = 1;
                 clearInterval(timer);
-                $('.nextBtn').css("background-image","url(/praise_xi_shanbei/Public/images/next.png)");
-                $('.nextBtn').html(" ");
-                $('.nextBtn').css('padding','6% 0');
+                time_content.html('下一个');
             }
         },1000);
         $.mobile.loading('show');
@@ -154,19 +153,15 @@ $(function () {
             return false;
         }
         clearInterval(timer);
-        $('.nextBtn').css("background-image","url(/praise_xi_shanbei/Public/images/blankBtn.png)");
-        $('.nextBtn').html('<span class="time">15</span>s');
-        $('.nextBtn').css('padding','3% 0');
+        time_content.html(15+' s');
         timeNum = 15;
         timer = setInterval(function(){
             timeNum--;
-            $('.time').html(timeNum+'s');
+            time_content.html(timeNum+' s');
             if (timeNum == 0){
                 nextFlag = 1;
                 clearInterval(timer);
-                $('.nextBtn').css("background-image","url(/praise_xi_shanbei/Public/images/next.png)");
-                $('.nextBtn').html(" ");
-                $('.nextBtn').css('padding','6% 0');
+                time_content.html('下一个')
             }
         },1000);
         var _data = {};
@@ -210,24 +205,9 @@ $(function () {
             }
         });
     });
-    $('.goOver').on('click',function(){
-       $('.firstState').css('display','none');
-        $('.secondState').css('display','block');
-    });
-    $('.goCardPage').on('click',function(){
-        $('.firstState').css('display','none');
-        $('.secondState').css('display','block');
-        $.mobile.changePage('#overPage',{
-            transition:'flow'
-        });
-    });
     $('.ok').on('click',function(){
-        $('.secondState').css('display','none');
-        $('.firstState').css('display','block');
+        time_content.html(15+' s');
         timeNum = 15;
-        $('.nextBtn').css("background-image","url(/praise_xi_shanbei/Public/images/blankBtn.png)");
-        $('.nextBtn').html('<span class="time">15</span>s');
-        $('.nextBtn').css('padding','3% 0');
         $.mobile.changePage('#beginPage',{
             transition:'flow'
         });
@@ -238,9 +218,7 @@ $(function () {
         $.mobile.changePage('#backPage',{
             transition:'flow'
         });
+        time_content.html(15+' s');
         timeNum = 15;
-        $('.nextBtn').css("background-image","url(/praise_xi_shanbei/Public/images/blankBtn.png)");
-        $('.nextBtn').html('<span class="time">15</span>s');
-        $('.nextBtn').css('padding','3% 0');
     });
 });
