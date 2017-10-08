@@ -7,9 +7,9 @@ $(document).on("pageshow","#backPage",function(){
 $(document).on("pageshow","#listPage",function(){
     $('.beginImg').removeClass('pulse');
 });
-var question_link = "/19th/index.php/Home/questions";
-var rank_link = "/19th/index.php/Home/moreRank";
-var link_rank = "/19th/index.php/Home/rank";
+var question_link = "/19th/index.php/Home/Index/questions";
+var rank_link = "/19th/index.php/Home/Index/moreRank";
+var link_rank = "/19th/index.php/Home/Index/rank";
 function loadImgs(b, g) {
     var f = {};
     var d = 0;
@@ -29,7 +29,7 @@ function loadImgs(b, g) {
     }
     return f
 }
-function showPage(obj){
+function showPage(){
     $.mobile.loading('hide');
     $.mobile.changePage('#beginPage',{
             transition:'slide'
@@ -78,7 +78,8 @@ $(function(){
             alert(data.status);
         }
     });
-    var Imgs = ['au','back','backintro','beginXi','blankBtn','cardBack','Cu','flag','good','goOver','listBack','listBtn','listTop','myCardtitle','next','ok','questionBack','replay','return','shadow','si','startBtn','startGame'];
-    loadImgs(Imgs,showPage);
+    //var Imgs = [];
+    //loadImgs(Imgs,showPage);
+    showPage();
 });
 

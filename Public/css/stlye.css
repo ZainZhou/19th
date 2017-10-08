@@ -3,7 +3,7 @@
   padding: 0;
   font-size: 13px;
   font-family: "Microsoft YaHei";
-  text-shadow: none !important;
+  text-shadow: none;
 }
 @font-face {
   font-family: 'tx';
@@ -190,7 +190,7 @@ body {
   margin: 0 auto;
   margin-top: 12%;
   border-radius: 17px;
-  box-shadow: 0 5px 3px #333;
+  box-shadow: 0 5px 3px rgba(249, 210, 145, 0.7);
   word-wrap: break-word;
   position: relative;
 }
@@ -219,65 +219,57 @@ body {
   font-family: tx;
   font-size: 18px;
 }
-#overPage .firstState .goodBack {
-  width: 73%;
+#overPage .card_title {
   display: block;
-  margin: 10% auto;
+  float: left;
+  margin-left: 23%;
+  width: 54%;
+  margin-bottom: 5%;
 }
-#overPage .firstState .goOver {
-  height: 8%;
-  margin: 15px auto;
-  background: url("../images/goOver.png") center center no-repeat;
-  background-size: 100% 100%;
-}
-#overPage .secondState {
-  display: none;
-}
-#overPage .secondState .cardTitle {
-  width: 73%;
-  display: block;
-  margin: 3% auto;
-}
-#overPage .secondState .cardBack {
-  width: 73%;
-  margin: 3% auto;
-  background: url("../images/cardBack.png") center no-repeat;
-  background-size: 100% 100%;
-  height: 46%;
-  position: relative;
-}
-#overPage .secondState .cardBack .num {
+#overPage .btn_container {
   width: 100%;
-  position: absolute;
-  top: 33%;
+  float: left;
+}
+#overPage .btn_container div {
+  margin: 0 auto;
+}
+#overPage .btn_container .listBtn {
+  margin-bottom: 18px;
+}
+#overPage .copyright {
+  float: left;
+}
+#overPage .rank_container {
+  float: left;
+  width: 70.87%;
+  margin-left: 9.6%;
+  background: url("../images/background_back.png") center no-repeat;
+  background-size: 100% 100%;
+  padding: 5%;
+  margin-bottom: 10px;
+}
+#overPage .rank_container p {
   text-align: center;
-  color: #ffffff;
-  text-shadow: none;
-  left: -4px;
-  font-size: 21px;
+  line-height: 28px;
+  color: #fa845c;
+  font-size: 12px;
 }
-#overPage .secondState .cardBack .sentence {
-  color: #ff9f10;
+#overPage .rank_container p span {
+  font-family: tx;
+  font-size: 15px;
+  color: #f4bf27;
+  text-shadow: 0 1px 0 #fa845c;
+}
+#overPage .rank_container .nickname {
   font-size: 16px;
-  position: absolute;
-  padding: 0 8%;
-  top: 65%;
-  line-height: 27px;
+  text-shadow: 0 1px 0 #fa845c;
+  font-weight: 600;
+  color: #f4bf27;
 }
-#overPage .secondState .cardBack .sentence span {
-  font-size: 16px;
-}
-#overPage .secondState .btn {
-  height: 8%;
-}
-#overPage .secondState .ok {
-  background: url("../images/ok.png") center no-repeat;
-  background-size: 100% 100%;
+#overPage .rank_container .cup_img {
+  display: block;
+  width: 44.67%;
   margin: 5% auto;
-}
-#overPage .secondState .replay {
-  background: url("../images/replay.png") center no-repeat;
-  background-size: 100% 100%;
 }
 #listPage {
   position: relative;

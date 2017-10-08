@@ -3,7 +3,7 @@
   padding: 0;
   font-size: 13px;
   font-family: "Microsoft YaHei";
-  text-shadow: none !important;
+  text-shadow: none;
 }
 @font-face {
   font-family: 'tx';
@@ -188,7 +188,7 @@ body{
     margin: 0 auto;
     margin-top: 12%;
     border-radius: 17px;
-    box-shadow: 0 5px 3px #333;
+    box-shadow: 0 5px 3px rgba(249,210,145,0.7);
     word-wrap:break-word;
     position: relative;
     .conversation{
@@ -219,66 +219,56 @@ body{
   }
 }
 #overPage{
-  .firstState{
-    .goodBack{
-      width: 73%;
-      display: block;
-      margin: 10% auto;
+  .card_title{
+    display: block;
+    float: left;
+    margin-left: 23%;
+    width: 54%;
+    margin-bottom: 5%;
+  }
+  .btn_container{
+    width: 100%;
+    float: left;
+    div{
+      margin: 0 auto;
     }
-    .goOver{
-      height: 8%;
-      margin: 15px auto;
-      background: url("../images/goOver.png")center center no-repeat;
-      background-size: 100% 100%;
+    .listBtn{
+      margin-bottom: 18px;
     }
   }
-  .secondState{
-    display: none;
-    .cardTitle{
-      width: 73%;
+  .copyright{
+    float: left;
+  }
+  .rank_container{
+    float: left;
+    width: 70.87%;
+    margin-left: 9.6%;
+    background: url("../images/background_back.png")center no-repeat;
+    background-size: 100% 100%;
+    padding: 5%;
+    margin-bottom: 10px;
+    p{
+      text-align: center;
+      line-height: 28px;
+      color: #fa845c;
+      font-size: 12px;
+      span{
+        font-family: tx;
+        font-size: 15px;
+        color: #f4bf27;
+        text-shadow: 0 1px 0 #fa845c;
+      }
+    }
+    .nickname{
+      font-size: 16px;
+      text-shadow: 0 1px 0 #fa845c;
+      font-weight: 600;
+      color: #f4bf27;
+    }
+    .cup_img{
       display: block;
-      margin: 3% auto;
-    }
-    .cardBack{
-      width: 73%;
-      margin: 3% auto;
-      background: url("../images/cardBack.png") center no-repeat;
-      background-size: 100% 100%;
-      height: 46%;
-      position: relative;
-      .num{
-        width: 100%;
-        position: absolute;
-        top:33%;
-        text-align: center;
-        color: #ffffff;
-        text-shadow: none;
-        left: -4px;
-        font-size: 21px;
-      }
-      .sentence{
-        color: #ff9f10;
-        font-size: 16px;
-        position: absolute;
-        padding: 0 8%;
-        top: 65%;
-        line-height: 27px;
-        span{
-          font-size: 16px;
-        }
-      }
-    }
-    .btn{
-      height: 8%;
-    }
-    .ok{
-      background: url("../images/ok.png")center no-repeat;
-      background-size: 100% 100%;
+      width: 44.67%;
       margin: 5% auto;
-    }
-    .replay{
-      background: url("../images/replay.png")center no-repeat;
-      background-size: 100% 100%;
     }
   }
 }
