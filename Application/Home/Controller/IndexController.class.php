@@ -156,6 +156,12 @@ class IndexController extends BaseController {
         $limit = $to - $offset;
         $users = M('users');
         $list = $users->order('score desc')->field('nickname, imgurl, score')->limit($offset, $limit)->select();
+        $rank = $from;
+        foreach ($list as &$v) {
+            unset($v['score']);
+            $v['rank'] = $rank;
+            $rank++;
+        }
         $this->ajaxReturn(array(
             'status' => 200,
             'data'  => $list
