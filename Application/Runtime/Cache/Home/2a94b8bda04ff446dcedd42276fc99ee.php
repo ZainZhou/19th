@@ -85,7 +85,7 @@
         </div>
         <div data-role="page" id="gamePage">
             <img src="/19th/Public/images/VoiceofYoung.png?v=1" alt="" class="logo">
-            <div class="questionContainer">
+            <div class="questionContainer" data-role="none">
                 <div class="conversation">
                     <p class="Qtitle">
 

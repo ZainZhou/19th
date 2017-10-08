@@ -189,8 +189,8 @@ body {
   background-size: 100% 100%;
   margin: 0 auto;
   margin-top: 12%;
-  border-radius: 4px;
-  border-bottom: 10px solid #fff1af;
+  border-radius: 17px;
+  box-shadow: 0 5px 3px #333;
   word-wrap: break-word;
   position: relative;
 }
@@ -213,7 +213,7 @@ body {
   text-shadow: 1px 3px 0 #f8ddaf !important;
 }
 #gamePage .nextBtn {
-  margin: 3% auto;
+  margin: 6.5% auto;
 }
 #gamePage .nextBtn .time {
   font-family: tx;
