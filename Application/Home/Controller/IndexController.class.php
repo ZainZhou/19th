@@ -107,6 +107,7 @@ class IndexController extends BaseController {
             'status' => 200,
             'data'   => array(
                 'question' => $question,
+                'current'  => $currentData['current']
             )
         ));
     }
