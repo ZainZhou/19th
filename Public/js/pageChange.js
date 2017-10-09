@@ -35,7 +35,7 @@ $(function () {
             if(data.status == 200){
                 f += 10;
                 for(var i = 0 ; i < data.data.length ; i++){
-                    if(i%2 == 0){
+                    if(parseInt(data.data[i].rank)%2 != 0){
                         ranks.append('<li style="background: #feebcb"> <img src="'+data.data[i].imgurl+'" alt="" class="list_avatar"> <span class="list_nickname">'+data.data[i].nickname+'</span> <span class="list_ranknum">'+data.data[i].rank+'</span> </li>');
                     }else{
                         ranks.append('<li> <img src="'+data.data[i].imgurl+'" alt="" class="list_avatar"> <span class="list_nickname">'+data.data[i].nickname+'</span> <span class="list_ranknum">'+data.data[i].rank+'</span> </li>');
