@@ -14,6 +14,18 @@ $(function () {
     var next_question = $('.nextBtn');
     var q_title = $('.Qtitle');
     var q_content = $('.sentences');
+    var myStudyBtn = $('.studyBtn');
+    var replayBtn = $('.replayBtn');
+    replayBtn.on('click',function(){
+        $.mobile.changePage('#beginPage',{
+            transition:'flow'
+        });
+    });
+    myStudyBtn.on('click',function(){
+        $.mobile.changePage('#overPage',{
+            transition:'flow'
+        });
+    });
    $('.startBtn').on('click',function(){
         $.mobile.changePage('#backPage',{
             transition:'flow'
