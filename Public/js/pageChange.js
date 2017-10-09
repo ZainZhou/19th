@@ -23,6 +23,29 @@ $(function () {
     var user_avatar = $('.user_avatar');
     var ranks = $('.list_rank');
     var top3 = ranks.find('li');
+    var load_more = $('.load_more');
+    var f = 51;
+    load_more.on('click',function(){
+        $.mobile.loading('show');
+        var _data = {};
+        _data.from = f;
+        _data.to = f+9;
+        $.post(rank_link,_data,function(data){
+            $.mobile.loading('hide');
+            if(data.status == 200){
+                f += 10;
+                for(var i = 0 ; i < data.data.length ; i++){
+                    if(i%2 == 0){
+                        ranks.append('<li style="background: #feebcb"> <img src="'+data.data[i].imgurl+'" alt="" class="list_avatar"> <span class="list_nickname">'+data.data[i].nickname+'</span> <span class="list_ranknum">'+data.data[i].rank+'</span> </li>');
+                    }else{
+                        ranks.append('<li> <img src="'+data.data[i].imgurl+'" alt="" class="list_avatar"> <span class="list_nickname">'+data.data[i].nickname+'</span> <span class="list_ranknum">'+data.data[i].rank+'</span> </li>');
+                    }
+                }
+            }else{
+                alert(data.status)
+            }
+        })
+    });
     replayBtn.on('click',function(){
         $.mobile.changePage('#beginPage',{
             transition:'flow'
@@ -71,7 +94,11 @@ $(function () {
                         top3.eq(i).find('.list_avatar').attr('src',data.data[i].imgurl);
                         top3.eq(i).find('.list_nickname').html(data.data[i].nickname);
                     }else{
-                        ranks.append('<li> <img src="'+data.data[i].imgurl+'" alt="" class="list_avatar"> <span class="list_nickname">'+data.data[i].nickname+'</span> <span class="list_ranknum">'+data.data[i].rank+'</span> </li>');
+                        if(i%2 == 0){
+                            ranks.append('<li style="background: #feebcb"> <img src="'+data.data[i].imgurl+'" alt="" class="list_avatar"> <span class="list_nickname">'+data.data[i].nickname+'</span> <span class="list_ranknum">'+data.data[i].rank+'</span> </li>');
+                        }else{
+                            ranks.append('<li> <img src="'+data.data[i].imgurl+'" alt="" class="list_avatar"> <span class="list_nickname">'+data.data[i].nickname+'</span> <span class="list_ranknum">'+data.data[i].rank+'</span> </li>');
+                        }
                     }
                 }
                 $.mobile.changePage('#listPage',{
@@ -129,7 +156,8 @@ $(function () {
             return false;
         }
         nextFlag = 0;
-        if(current == 5){
+        console.log(current);
+        if(current == 4){
             $.mobile.loading('show');
             $.post(link_rank,1,function(data){
                 $.mobile.loading('hide');
@@ -139,6 +167,10 @@ $(function () {
                     rank_num.html(data.data.rank);
                     word_num.html(data.data.groups);
                     day_num.html(data.data.days);
+                    $.mobile.changePage('#overPage',{
+                        transition:'flow'
+                    });
+                    current = 0;
                     //shareDesc = '我正在参加 “团团打卡 学讲话” 特训，打卡第'+data.data.days+'天，排第'+data.data.rank+'名，明天继续！你也加入吧'
                     //initShare(shareTitle, shareDesc, shareURL, shareImg);
                 }else {

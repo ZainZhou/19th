@@ -283,6 +283,7 @@ body {
   text-align: center;
   color: #cccccc;
   padding: 5% 0;
+  background: #ffffff;
 }
 #listPage .list_container {
   width: 100%;
@@ -359,7 +360,7 @@ body {
   font-size: 14px;
   float: right;
   margin-right: 4.5%;
-  margin-top: 3.5%;
+  padding: 2% 0;
   color: #fc932b;
 }
 #listPage .list_container .rank_list .list_rank li .medal {
