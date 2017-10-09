@@ -278,6 +278,12 @@ body {
 #listPage .copyright {
   float: left;
 }
+#listPage .load_more {
+  width: 100%;
+  text-align: center;
+  color: #cccccc;
+  padding: 5% 0;
+}
 #listPage .list_container {
   width: 100%;
   position: relative;

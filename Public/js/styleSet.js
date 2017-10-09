@@ -8,5 +8,4 @@ $(function(){
     $(document).on("pagebeforeshow","#gamePage",function(){
         content_back.css('min-height',w*1.1);
     });
-    list_rank.css();
 });
