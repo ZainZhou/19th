@@ -137,7 +137,7 @@ class IndexController extends BaseController {
                 'nickname' => $user['nickname'],
                 'avatar' => $user['imgurl'],
                 'days' => $user['days'],
-                'groups' => $user['count']
+                'groups' => $user['count']*5
             )
         ));
     }
