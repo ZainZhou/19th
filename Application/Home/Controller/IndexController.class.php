@@ -235,6 +235,7 @@ class IndexController extends BaseController {
             $data1 = array(
                 'openid' => $openid,
                 'nickname' => '周老板'.$score,
+                'score' => $score
             );
             $data2 = array(
                 'openid' => $openid
