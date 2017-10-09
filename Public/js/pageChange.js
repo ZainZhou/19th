@@ -21,6 +21,8 @@ $(function () {
     var rank_num = $('.ranknum');
     var nickname = $('.nickname');
     var user_avatar = $('.user_avatar');
+    var ranks = $('.list_rank');
+    var top3 = ranks.find('li');
     replayBtn.on('click',function(){
         $.mobile.changePage('#beginPage',{
             transition:'flow'
@@ -66,7 +68,10 @@ $(function () {
             if(data.status == 200){
                 for(var i = 0 ; i < data.data.length ; i++){
                     if(i<3){
-
+                        top3.eq(i).find('.list_avatar').attr('src',data.data[i].imgurl);
+                        top3.eq(i).find('.list_nickname').html(data.data[i].nickname);
+                    }else{
+                        
                     }
                 }
                 $.mobile.changePage('#listPage',{
@@ -129,17 +134,13 @@ $(function () {
             $.post(link_rank,1,function(data){
                 $.mobile.loading('hide');
                 if(data.status == 200){
-                    $('.secondState').css('display','none');
-                    $('.firstState').css('display','block');
-                    $('.days').html(data.data.days);
-                    $('.num').html(data.data.days);
-                    $('.groups').html(data.data.groups);
-                    $('.rankNow').html(data.data.rank);
-                    $.mobile.changePage('#overPage',{
-                        transition:'flow'
-                    });
-                    shareDesc = '我正在参加 “团团打卡 学讲话” 特训，打卡第'+data.data.days+'天，排第'+data.data.rank+'名，明天继续！你也加入吧'
-                    initShare(shareTitle, shareDesc, shareURL, shareImg);
+                    user_avatar.attr('src',data.data.avatar);
+                    nickname.html(data.data.nickname);
+                    rank_num.html(data.data.rank);
+                    word_num.html(data.data.groups);
+                    day_num.html(data.data.days);
+                    //shareDesc = '我正在参加 “团团打卡 学讲话” 特训，打卡第'+data.data.days+'天，排第'+data.data.rank+'名，明天继续！你也加入吧'
+                    //initShare(shareTitle, shareDesc, shareURL, shareImg);
                 }else {
                     alert(data.error);
                 }
