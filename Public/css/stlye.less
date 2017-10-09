@@ -49,12 +49,12 @@ body{
 .o_btn{
   background: url("../images/orange_btn.png")center center no-repeat;
   background-size: 100% 100%;
-  text-shadow:0 3px #ff6114 !important;
+  text-shadow:0 3px #ff6114;
 }
 .y_btn{
   background: url("../images/yellow_btn.png")center center no-repeat;
   background-size: 100% 100%;
-  text-shadow:0 3px #f7a81c !important;
+  text-shadow:0 3px #f7a81c;
 }
 .logo{
   float: left;
@@ -195,7 +195,7 @@ body{
       padding: 5%;
       padding-top: 10%;
       div{
-        font-size: 13px !important;
+        font-size: 13px;
         padding:13px;
         color: #f69c4a;
       }
@@ -206,7 +206,7 @@ body{
         font-size: 18px;
         font-family: tx;
         color: #fa865e;
-        text-shadow: 1px 3px 0 #f8ddaf !important;
+        text-shadow: 1px 3px 0 #f8ddaf;
       }
     }
   }
@@ -273,78 +273,101 @@ body{
   }
 }
 #listPage{
+  background: linear-gradient(#a3e5e2,#faf4d4);
   position: relative;
-  .listBack{
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 23%;
-    height: 68%;
-    background: url("../images/listBack.png")center no-repeat;
-    background-size: 100% 100%;
+  .copyright{
+    float: left;
+  }
+  .load_more{
+    width: 100%;
+    text-align: center;
+    color: #cccccc;
+    padding: 5% 0;
+  }
+  .list_container{
+    width: 100%;
     position: relative;
-  }
-  .return{
-    background: url("../images/return.png")center no-repeat;
-    background-size: 100% 100%;
-    height: 8%;
-    margin-top: 3%;
-  }
-  .listTop{
-    top: 3%;
-    width: 90%;
-    height: 20%;
-    position: absolute;
-    z-index: 100;
-  }
-  .listHolder{
-    background: #fff6ef;
-    width: 80%;
-    margin: 0 auto;
-    overflow: hidden;
-    position: absolute;
-    top: 8%;
-    border-bottom: 3px solid #fbefe6;
-    .list{
-      width: 100%;
-      list-style: none;
-      li{
+    .list_title{
+      width: 64.67%;
+      position: relative;
+      left: -14%;
+      top:0;
+      z-index: 100;
+    }
+    .rank_list{
+      width: 84.5%;
+      margin: 0 auto;
+      margin-top: -15%;
+      border: 8px solid #e35b3a;
+      border-radius: 10px;
+      box-shadow: 3px 2px 1px #c8ddc6;
+      background: #fcf8e8;
+      .user_avatar{
+        width: 23.3%;
+        display: block;
+        margin: 0 auto;
+        margin-top: 15%;
+        border-radius: 50%;
+        border: 2px solid #ffffff;
+      }
+      .nickname{
+        color: #fcb103;
+        text-align: center;
+        margin-top: 1.2%;
+        margin-bottom: 3%;
+      }
+      .rank{
+        text-align: center;
+        color: #e87d60;
+        font-family: tx;
+        .ranknum{
+          font-family: tx;
+          color: #53ccc1;
+        }
+      }
+      .studyBtn{
+        display: block;
+        margin: 3% auto;
+        width: 29.167%;
+      }
+      .list_rank{
+        list-style: none;
         width: 100%;
-        padding: 2% 0;
-        color: #ffae15;
-        overflow: hidden;
-        .aName{
-          float: right;
-          padding-right: 20px;
-        }
-        .aRank{
-          float: left;
-          padding-left: 20px;
-          .medal{
-            height: 5%;
-            margin-left: -5px;
+        li{
+          width: 90%;
+          overflow: hidden;
+          padding: 3% 5%;
+          .list_avatar{
+            border-radius: 50%;
+            border: 1px solid #ffffff;
+            float: left;
+            width: 11.67%;
           }
-        }
-        span{
-          display: inline-block;
+          .list_nickname{
+            color: #f08b3a;
+            font-size: 12px;
+            float: left;
+            margin-left: 5%;
+            margin-top: 4%;
+          }
+          .medal{
+            float: right;
+            width: 12.5%;
+            margin-top: 1%;
+          }
         }
       }
     }
   }
-  .showP{
-    margin-top: 10%;
-    padding-left: 20px;
-    padding-bottom: 8px;
-    width: 100%;
-    span{
-      color: #ffae15;
-    }
-  }
 }
 @media (max-width: 330px) {
-  .allusion{
-    div>div{
-      width: 88% !important;
-      font-size: 14px !important;
-    }
+  #backPage .background_content{
+    font-size: 9px;
+  }
+  #backPage .programerHolder .programer li{
+    font-size: 11px !important;
+  }
+  #gamePage .questionContainer .conversation div{
+    font-size: 11px;
   }
 }

@@ -57,12 +57,12 @@ body {
 .o_btn {
   background: url("../images/orange_btn.png") center center no-repeat;
   background-size: 100% 100%;
-  text-shadow: 0 3px #ff6114 !important;
+  text-shadow: 0 3px #ff6114;
 }
 .y_btn {
   background: url("../images/yellow_btn.png") center center no-repeat;
   background-size: 100% 100%;
-  text-shadow: 0 3px #f7a81c !important;
+  text-shadow: 0 3px #f7a81c;
 }
 .logo {
   float: left;
@@ -199,7 +199,7 @@ body {
   padding-top: 10%;
 }
 #gamePage .questionContainer .conversation div {
-  font-size: 13px !important;
+  font-size: 13px;
   padding: 13px;
   color: #f69c4a;
 }
@@ -210,7 +210,7 @@ body {
   font-size: 18px;
   font-family: tx;
   color: #fa865e;
-  text-shadow: 1px 3px 0 #f8ddaf !important;
+  text-shadow: 1px 3px 0 #f8ddaf;
 }
 #gamePage .nextBtn {
   margin: 6.5% auto;
@@ -272,76 +272,101 @@ body {
   margin: 5% auto;
 }
 #listPage {
+  background: linear-gradient(#a3e5e2, #faf4d4);
   position: relative;
 }
-#listPage .listBack {
-  width: 90%;
-  margin: 0 auto;
-  margin-top: 23%;
-  height: 68%;
-  background: url("../images/listBack.png") center no-repeat;
-  background-size: 100% 100%;
+#listPage .copyright {
+  float: left;
+}
+#listPage .load_more {
+  width: 100%;
+  text-align: center;
+  color: #cccccc;
+  padding: 5% 0;
+}
+#listPage .list_container {
+  width: 100%;
   position: relative;
 }
-#listPage .return {
-  background: url("../images/return.png") center no-repeat;
-  background-size: 100% 100%;
-  height: 8%;
-  margin-top: 3%;
-}
-#listPage .listTop {
-  top: 3%;
-  width: 90%;
-  height: 20%;
-  position: absolute;
+#listPage .list_container .list_title {
+  width: 64.67%;
+  position: relative;
+  left: -14%;
+  top: 0;
   z-index: 100;
 }
-#listPage .listHolder {
-  background: #fff6ef;
-  width: 80%;
+#listPage .list_container .rank_list {
+  width: 84.5%;
   margin: 0 auto;
-  overflow: hidden;
-  position: absolute;
-  top: 8%;
-  border-bottom: 3px solid #fbefe6;
+  margin-top: -15%;
+  border: 8px solid #e35b3a;
+  border-radius: 10px;
+  box-shadow: 3px 2px 1px #c8ddc6;
+  background: #fcf8e8;
 }
-#listPage .listHolder .list {
-  width: 100%;
+#listPage .list_container .rank_list .user_avatar {
+  width: 23.3%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15%;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+#listPage .list_container .rank_list .nickname {
+  color: #fcb103;
+  text-align: center;
+  margin-top: 1.2%;
+  margin-bottom: 3%;
+}
+#listPage .list_container .rank_list .rank {
+  text-align: center;
+  color: #e87d60;
+  font-family: tx;
+}
+#listPage .list_container .rank_list .rank .ranknum {
+  font-family: tx;
+  color: #53ccc1;
+}
+#listPage .list_container .rank_list .studyBtn {
+  display: block;
+  margin: 3% auto;
+  width: 29.167%;
+}
+#listPage .list_container .rank_list .list_rank {
   list-style: none;
-}
-#listPage .listHolder .list li {
   width: 100%;
-  padding: 2% 0;
-  color: #ffae15;
+}
+#listPage .list_container .rank_list .list_rank li {
+  width: 90%;
   overflow: hidden;
+  padding: 3% 5%;
 }
-#listPage .listHolder .list li .aName {
-  float: right;
-  padding-right: 20px;
-}
-#listPage .listHolder .list li .aRank {
+#listPage .list_container .rank_list .list_rank li .list_avatar {
+  border-radius: 50%;
+  border: 1px solid #ffffff;
   float: left;
-  padding-left: 20px;
+  width: 11.67%;
 }
-#listPage .listHolder .list li .aRank .medal {
-  height: 5%;
-  margin-left: -5px;
+#listPage .list_container .rank_list .list_rank li .list_nickname {
+  color: #f08b3a;
+  font-size: 12px;
+  float: left;
+  margin-left: 5%;
+  margin-top: 4%;
 }
-#listPage .listHolder .list li span {
-  display: inline-block;
-}
-#listPage .showP {
-  margin-top: 10%;
-  padding-left: 20px;
-  padding-bottom: 8px;
-  width: 100%;
-}
-#listPage .showP span {
-  color: #ffae15;
+#listPage .list_container .rank_list .list_rank li .medal {
+  float: right;
+  width: 12.5%;
+  margin-top: 1%;
 }
 @media (max-width: 330px) {
-  .allusion div > div {
-    width: 88% !important;
-    font-size: 14px !important;
+  #backPage .background_content {
+    font-size: 9px;
+  }
+  #backPage .programerHolder .programer li {
+    font-size: 11px !important;
+  }
+  #gamePage .questionContainer .conversation div {
+    font-size: 11px;
   }
 }

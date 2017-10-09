@@ -14,6 +14,23 @@ $(function () {
     var next_question = $('.nextBtn');
     var q_title = $('.Qtitle');
     var q_content = $('.sentences');
+    var myStudyBtn = $('.studyBtn');
+    var replayBtn = $('.replayBtn');
+    var day_num = $('.daynum');
+    var word_num = $('.wordnum');
+    var rank_num = $('.ranknum');
+    var nickname = $('.nickname');
+    var user_avatar = $('.user_avatar');
+    replayBtn.on('click',function(){
+        $.mobile.changePage('#beginPage',{
+            transition:'flow'
+        });
+    });
+    myStudyBtn.on('click',function(){
+        $.mobile.changePage('#overPage',{
+            transition:'flow'
+        });
+    });
    $('.startBtn').on('click',function(){
         $.mobile.changePage('#backPage',{
             transition:'flow'
@@ -29,12 +46,29 @@ $(function () {
     });
     $('.listBtn').on('click',function(){
         $.mobile.loading('show');
+        $.post(link_rank,"",function(data){
+            if(data.status == 200){
+                $.mobile.loading('hide');
+                user_avatar.attr('src',data.data.avatar);
+                nickname.html(data.data.nickname);
+                rank_num.html(data.data.rank);
+                word_num.html(data.data.groups);
+                day_num.html(data.data.days);
+            }else{
+                alert(data.info);
+            }
+        });
         var _data = {};
         _data.from = 1;
         _data.to = 50;
         $.post(rank_link,_data,function(data){
             $.mobile.loading('hide');
             if(data.status == 200){
+                for(var i = 0 ; i < data.data.length ; i++){
+                    if(i<3){
+
+                    }
+                }
                 $.mobile.changePage('#listPage',{
                     transition: 'flow'
                 })
