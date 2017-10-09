@@ -71,7 +71,7 @@ $(function () {
                         top3.eq(i).find('.list_avatar').attr('src',data.data[i].imgurl);
                         top3.eq(i).find('.list_nickname').html(data.data[i].nickname);
                     }else{
-                        
+                        ranks.append('<li> <img src="'+data.data[i].imgurl+'" alt="" class="list_avatar"> <span class="list_nickname">'+data.data[i].nickname+'</span> <span class="list_ranknum">'+data.data[i].rank+'</span> </li>');
                     }
                 }
                 $.mobile.changePage('#listPage',{
