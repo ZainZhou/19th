@@ -5,8 +5,8 @@ class BaseController extends Controller {
     public function _initialize(){
         header('Access-Control-Allow-Origin: *');
         if (APP_DEBUG) {
-            $openid = 'ouRCyjhdsj8RQofIOPHc7nX9hA98';//session('openid');//
-            $nickname = '知识混子周政';// session('nickname'); //
+            $openid = 'ouRCyjhdsj8RQofIOPHc7nX9hA983';//session('openid');//
+            $nickname = '知识混子周政3';// session('nickname'); //
         } else {
             $openid = session('openid');//
             $nickname = session('nickname'); //
