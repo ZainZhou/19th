@@ -88,6 +88,7 @@ class IndexController extends BaseController {
         array_push($currentData['today_learn_id'], $question['id']);
         $currentData['today_learn_id'] = json_encode($currentData['today_learn_id']);
         $currentData['current'] += 1;
+        $current = $currentData['current'];
         if ($currentData['current'] == 5) {
             $currentData['current'] = 0;
             $currentData['today_group_count'] += 1;
@@ -107,7 +108,7 @@ class IndexController extends BaseController {
             'status' => 200,
             'data'   => array(
                 'question' => $question,
-                'current'  => $currentData['current']
+                'current'  => $current
             )
         ));
     }

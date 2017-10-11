@@ -157,7 +157,7 @@ $(function () {
         }
         nextFlag = 0;
         console.log(current);
-        if(current == 4){
+        if(current == 5){
             $.mobile.loading('show');
             $.post(link_rank,1,function(data){
                 $.mobile.loading('hide');
