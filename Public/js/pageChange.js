@@ -120,6 +120,8 @@ $(function () {
     });
     $('.playBtn').on('click',function(){
         clearInterval(timer);
+        time_content.html(15+' s');
+        timeNum = 15;
         timer = setInterval(function(){
             timeNum--;
             time_content.html(timeNum+' s');
