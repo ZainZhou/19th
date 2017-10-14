@@ -70,7 +70,7 @@ class IndexController extends BaseController {
         }
 
         //请求新题目时检查时间是否满足
-        if (time() - $currentData['time'] < 10 && $isNew) {
+        if (time() - $currentData['time'] < 5 && $isNew) {
             $this->ajaxReturn(array(
                 'status' => 403,
                 'error'   => '学习时间未满'
