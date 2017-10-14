@@ -2,7 +2,7 @@
  * Created by hughes on 2017/3/4.
  */
 timer = null;
-timeNum = 15;
+timeNum = 5;
 nextFlag = 0;
 current = 1;
 $(function () {
@@ -120,8 +120,8 @@ $(function () {
     });
     $('.playBtn').on('click',function(){
         clearInterval(timer);
-        time_content.html(15+' s');
-        timeNum = 15;
+        time_content.html(5+' s');
+        timeNum = 5;
         timer = setInterval(function(){
             timeNum--;
             time_content.html(timeNum+' s');
@@ -182,8 +182,8 @@ $(function () {
             return false;
         }
         clearInterval(timer);
-        time_content.html(15+' s');
-        timeNum = 15;
+        time_content.html(5+' s');
+        timeNum = 5;
         timer = setInterval(function(){
             timeNum--;
             time_content.html(timeNum+' s');
@@ -210,8 +210,8 @@ $(function () {
         });
     });
     $('.ok').on('click',function(){
-        time_content.html(15+' s');
-        timeNum = 15;
+        time_content.html(5+' s');
+        timeNum = 5;
         $.mobile.changePage('#beginPage',{
             transition:'flow'
         });
@@ -220,7 +220,7 @@ $(function () {
         $.mobile.changePage('#backPage',{
             transition:'flow'
         });
-        time_content.html(15+' s');
-        timeNum = 15;
+        time_content.html(5+' s');
+        timeNum = 5;
     });
 });
