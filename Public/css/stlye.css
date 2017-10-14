@@ -15,6 +15,28 @@ body {
   width: 100%;
   height: 100%;
 }
+.overwarning {
+  position: absolute;
+  z-index: 1000000;
+  width: 60%;
+  height: 30%;
+  background: url("../images/warningv1.png") center no-repeat;
+  background-size: 100% 100%;
+  left: 20%;
+  top: 30%;
+  display: none;
+}
+.overwarning .closeWarning {
+  float: right;
+  margin: 2%;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  background: #ff7849;
+  border-radius: 50%;
+  color: #ffffff;
+}
 #beginPage,
 #backPage,
 #gamePage,

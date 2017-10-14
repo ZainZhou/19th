@@ -114,8 +114,8 @@ $(function () {
             transition:'flow'
         });
     });
-    $('.close').on('tap',function(){
-        $('.warning').css('display','none');
+    $('.closeWarning').on('tap',function(){
+        $('.overwarning').css('display','none');
         $('.mask').css('display','none');
     });
     $('.playBtn').on('click',function(){
@@ -146,6 +146,7 @@ $(function () {
             }
             else if (data.status == 403){
                 $.mobile.loading('hide');
+                $('.overwarning').css('display','block');
                 $('.mask').css('display','block');
             }else{
                 alert(data.error);
