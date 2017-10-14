@@ -1,6 +1,7 @@
 <?php
 namespace Home\Controller;
 use Org\Util\String;
+use Think\Model;
 
 class IndexController extends BaseController {
     private $appid = 'wx81a4a4b77ec98ff4';
@@ -69,7 +70,7 @@ class IndexController extends BaseController {
         }
 
         //请求新题目时检查时间是否满足
-        if (time() - $currentData['time'] < 10 && $isNew) {
+        if (time() - $currentData['time'] < 5 && $isNew) {
             $this->ajaxReturn(array(
                 'status' => 403,
                 'error'   => '学习时间未满'
@@ -118,8 +119,9 @@ class IndexController extends BaseController {
         $openid = session('openid');
         $user = $users->where(array('openid' => $openid))->find();
         $map['score'] = array('GT', $user['score']);
-        $rank = $users->where($map)->count();
-        $rank += 1;
+        $model = new Model();
+        $row = $model->query("select * from (select *, (@rank := @rank + 1)rank from (select openid from users order by score desc)t, (select @rank := 0)a)b WHERE openid='$openid'");
+        $rank = $row[0]['rank'];
 //        $list = $users->order('score desc')->field('nickname, imgurl, score')->limit(10)->select();
 //        if ($rank <= 50) {
 //            $real = $users->order('score desc')->field('nickname, imgurl, score')->limit(50)->select();
